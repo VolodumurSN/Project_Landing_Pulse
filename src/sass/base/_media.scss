@@ -1,0 +1,105 @@
+// @media (max-width: 1200px){
+    
+// }
+
+// @media (max-width: 991px){
+
+// }
+
+@media (max-width: 767px){
+    .promo{
+        .header{
+            &__logo{
+                width: 200px;
+            }
+            &__phone{
+                font-size: 14px;
+            }
+            .button{
+                width: 130px;
+                height: 35px;
+            }
+            &__official{
+                font-size: 12px;
+                span{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px){
+    .promo{
+        background: url(../img/bg/bg_promo_mobile.jpg) center (center/cover) no-repeat fixed;
+        .header{
+            flex-direction: column;
+            align-items: center;
+            &__logo {
+                margin-bottom: 25px;
+            }
+            &__official{
+                display: none;
+            }
+            &__phone{
+                font-size: 16px;
+                text-align: center;
+                margin: 0 auto;
+            }
+            .button{
+                width: 160px;
+                height: 35px;
+            }
+        }        
+        &__header {
+            font-size: 24px;
+            line-height: 18px;
+            text-align: center;
+        }
+        &__subheader {
+            margin-top: 5px;
+            font-size: 14px;
+            text-align: center;
+        }
+        &__wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 170px;
+        }
+        &__icons{
+            width: 300px;
+        }
+        &__icon{
+            font-size: 12px;
+        }
+        .button_main{
+            width: 245px;
+            font-size: 14px;
+            height: 40px;
+        }
+        &__link{
+            font-size: 14px;
+        }
+    }
+    .advantages{
+        padding: 37px 0 15px 0;
+        &__wrapper{
+            margin: 0;
+        }
+        &__item{
+            margin-top: 20px;
+        }
+        &__descr{
+            margin-top: 10px;
+        }
+
+    }
+    .title {
+        font-size: 20px;
+    }
+}			
+					
+
+
+		
