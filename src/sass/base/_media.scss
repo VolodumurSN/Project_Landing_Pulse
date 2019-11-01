@@ -98,6 +98,23 @@
     .title {
         font-size: 20px;
     }
+    .consultation{
+        padding: 47px 0 15px 0;
+        .title__left{
+            text-align: center;
+            line-height: 27px;
+        }
+        &__descr{
+            text-align: center;
+            line-height: 20px;
+            font-size: 16px;
+        }
+        
+    }
+    .feed-form{
+        margin: 0 auto;
+        margin-top: 20px;
+    }
 }			
 					
 
