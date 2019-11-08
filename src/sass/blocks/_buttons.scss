@@ -4,7 +4,7 @@
     height: 30px;
     border: none;
     border-radius: 7px;
-    background-color: #c70101;
+    background-color: $btn_color;
     cursor: pointer;
     outline: none !important;
     color: #ffffff;
@@ -17,10 +17,15 @@
         height: 50px;
         font-size: 16px;
     }
-    &__submit{
+    &_submit{
         width: 300px;
         height: 55px;
         color: #ffffff;
         font-size: 16px;
+    }
+    &_mini{
+        width: 131px;
+        height: 40px;
+        font-size: 14px;
     }
 }
