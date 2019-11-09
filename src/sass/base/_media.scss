@@ -160,6 +160,19 @@
             }
         }
     }
+    .footer{
+        &__info{
+            width: 90%;
+            height: 235px;
+            padding: 20px 20px;
+        }
+        &__addr{
+            font-size: 18px;
+        }
+        &__phone{
+            font-size: 18px;
+        }
+    }
 
 }			
 					
