@@ -2,9 +2,18 @@
     
 // }
 
-// @media (max-width: 991px){
-
-// }
+@media (max-width: 991px){
+    .catalog{
+        &__content{
+            justify-content: center;
+       }
+       &-item{
+            &:nth-child(3n){
+                margin-right: 10px;
+            }
+        }
+    }
+}
 
 @media (max-width: 767px){
     .promo{
@@ -34,7 +43,7 @@
 
 @media (max-width: 575px){
     .promo{
-        background: url(../img/bg/bg_promo_mobile.jpg) center (center/cover) no-repeat fixed;
+        background-position-x: 70%;
         .header{
             flex-direction: column;
             align-items: center;
@@ -121,6 +130,37 @@
     .carousel__inner{
         width: 300px;
     }
+    .catalog{
+        padding-bottom: 100px;
+        &__tabs{
+            margin-top: 20px;
+        }
+    }
+    .reviews{
+        &-wrapper{
+            &__person{
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0 20px;        
+            }
+            &__img{
+                margin: 0 auto;
+            }
+            &__descr{
+                margin-top: 20px;
+                text-align: justify;
+                p{
+                    text-align: center;
+                }
+                span{
+                    display: block;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
 }			
 					
 
