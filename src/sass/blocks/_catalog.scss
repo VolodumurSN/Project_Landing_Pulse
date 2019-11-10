@@ -25,7 +25,7 @@
         cursor: pointer;
         transition: 0.5s all;
         &:hover{
-            box-shadow: 3px 3px 20px $main-color;
+            box-shadow: 3px 3px 20px $btn_color;
             border: none;
         }
         div{
@@ -33,7 +33,7 @@
         }
         &_active{
             color: #fff;
-            background-color: $main-color;
+            background-color: $btn_color;
             border: none;
         }
     }

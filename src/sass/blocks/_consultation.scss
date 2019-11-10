@@ -9,4 +9,16 @@
         line-height: 25px;
         font-weight: 400;
     }
+    .error{
+        border: 1px solid red;
+        &:nth-child(6){
+            margin-bottom: 30px;
+        }
+    }
+    label.error{
+        color: #ffffff;
+        border: none;
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
 }

@@ -13,6 +13,53 @@
             }
         }
     }
+    .modal{
+        top: 52%;
+        width: 320px;
+        min-height: 300px;
+        padding: 30px 20px 15px 20px;
+        &__close{
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            color: $btn_color;
+        }
+        &__subtitle{
+            font-size: 16px;
+        }
+        &__descr{
+            font-size: 12px;
+        }
+        .error{
+            border: 1px solid red;
+            &:nth-child(6){
+                margin-bottom: 10px;
+            }
+        }
+        label.error{
+            border: none;
+            font-size: 11px;
+            margin-bottom: 7px;
+        }
+    }
+    .feed-form{
+        &_mini{
+            overflow: visible;
+            margin: 0 auto;
+            width: 260px;
+            input{
+                width: 260px;
+                height: 35px;
+                font-size: 13px;
+            }
+            .button_submit{
+                width: 260px;
+                height: 40px;
+                font-size: 14px;
+            }
+                
+        }
+    }
 }
 
 @media (max-width: 767px){
@@ -38,6 +85,13 @@
     }
     .carousel__inner{
         width: 555px;
+    }
+    .modal{
+        &__close{
+            top: 10px;
+            right: 10px;
+            color: $btn_color;
+        }
     }
 }
 
@@ -171,6 +225,13 @@
         }
         &__phone{
             font-size: 18px;
+        }
+    }
+    .modal{
+        &__close{
+            top: 10px;
+            right: 10px;
+            color: $btn_color;
         }
     }
 
