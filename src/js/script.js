@@ -27,23 +27,6 @@ $(document).ready(function(){ //download document with JQuery and run code when 
       .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
   });
 
-// $('.catalog-item__link').each(function(i){
-//   $(this).on('click', function(e){
-//     e.preventDefault();
-//     $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-    
-//     $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-//   })
-// });
-
-// $('.catalog-item__back').each(function(i){
-//   $(this).on('click', function(e){
-//     e.preventDefault();
-//     $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-    
-//     $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-//   })
-// })
 
   /*  Tabs content
     */
@@ -82,9 +65,12 @@ $(document).ready(function(){ //download document with JQuery and run code when 
     });
   });
 
-
+  /*   Validation
+   */
   function valideForms(form) {
-    $(form).validate({
+    $(form).submit(function(f) {
+      f.preventDefault(); //cancel page reload
+    }).validate({
       rules:{
         name: "required",
         phone: "required",
@@ -100,6 +86,18 @@ $(document).ready(function(){ //download document with JQuery and run code when 
           required: "Пожалуйста, введите свою почту",
           email: "Введите почту в формате name@domain.com"
         }
+      },
+      submitHandler: function (event) {
+        $.ajax({  
+          type: "POST",
+          url: "mailer/smart.php",
+          data: $(event).serialize()
+        }).done(function () {
+          $(event).find('input').val('');
+          $('#consultation, #order').fadeOut();
+          $('.overlay, #thanks').fadeIn();
+          $('form').trigger('reset'); 
+        });
       }
     });
   }
@@ -107,8 +105,6 @@ $(document).ready(function(){ //download document with JQuery and run code when 
   valideForms('#consultation form');
   valideForms('#order form');
 
-  $('input[name=phone]').mask("+7 (999) 999-99-99");
-  
-
-
+  $('input[name=phone]').mask("+7 (999) 999-99-99");  
 });
+

@@ -41,14 +41,3 @@
 	font-weight: 300;
 	font-style: normal;
 }
-
-@font-face {
-	font-family: 'Museo';
-	src: url('../fonts/MuseoSansCyrl-100.eot');
-	src: local('../fonts/MuseoSansCyrl-100'),
-		url('../fonts/MuseoSansCyrl-100.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/MuseoSansCyrl-100.woff') format('woff'),
-		url('../fonts/MuseoSansCyrl-100.ttf') format('truetype');
-	font-weight: 100;
-	font-style: normal;
-}
