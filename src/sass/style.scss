@@ -1,5 +1,17 @@
 @import 'base/variables';
 @import 'base/mixins';
+@import 'base/media';
+@import 'base/animations';
+*{
+    font-family: 'Museo', sans-serif;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+.container{
+    max-width: 950px;
+    margin: 0 auto;
+}
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/advantages';
@@ -12,14 +24,4 @@
 @import 'blocks/reviews';
 @import 'blocks/footer';
 @import 'blocks/modal';
-@import 'base/media';
-*{
-    font-family: 'Museo', sans-serif;
-}
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-.container{
-    max-width: 950px;
-    margin: 0 auto;
-}
+@import 'blocks/pageup';

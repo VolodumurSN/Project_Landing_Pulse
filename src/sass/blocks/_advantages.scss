@@ -8,6 +8,12 @@
     &__icon{
         display: block;
         margin: 0 auto;
+        &_animation{
+            animation: heartbeat 2s ease infinite;
+        }
+        &:hover{
+            animation-play-state: paused;
+        }
     }
     &__descr{
         display: block;

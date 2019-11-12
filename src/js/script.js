@@ -50,7 +50,7 @@ $(document).ready(function(){ //download document with JQuery and run code when 
     $('.overlay, #consultation').fadeIn('slow');    
   });
   $(document).mouseup(function (i){
-    let modal = $('#consultation, #order, #thanks');
+    const modal = $('#consultation, #order, #thanks');
     if (!modal.is(i.target) && modal.has(i.target).length === 0) {
 			$('.overlay, #consultation, #order, #thanks').fadeOut('slow');
 		}
@@ -105,6 +105,28 @@ $(document).ready(function(){ //download document with JQuery and run code when 
   valideForms('#consultation form');
   valideForms('#order form');
 
-  $('input[name=phone]').mask("+7 (999) 999-99-99");  
+  $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+
+  /*  Smooth scroll and pageup
+   */
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 1600){
+      $('.pageup').fadeIn();
+    }else{
+      $('.pageup').fadeOut();
+    }
+  });
+
+  $("a[href^='#']").click(function(){
+    const _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+    return false;
+  });
+
+  new WOW().init();
+  
+
+
 });
 
