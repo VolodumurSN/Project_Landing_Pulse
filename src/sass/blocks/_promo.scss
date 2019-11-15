@@ -7,6 +7,11 @@
         flex-direction: column;
         align-items: flex-end;
         margin-top: 90px;
+        a{
+            &:hover{
+                text-decoration: none;
+            }
+        }
     }
     &__header{
         color: #ffffff;

@@ -45,6 +45,9 @@
         border: 2px solid #ffffff;
         border-radius: 100%;
         margin: 0 15px;
+        &:hover{
+            text-decoration: none;
+        }
         span{
             color: #ffffff;
             font-size: 26px;
