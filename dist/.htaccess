@@ -1,0 +1,7 @@
+# Cache these type of files for 7 days
+<IfModule mod_headers.c>
+<FilesMatch "\.(jpg|jpeg|png|ico|gif|css|js|eot|otf|tt[cf]|woff|woff2|svg|mp4|webm|ogv)$">
+    Header set Cache-Control "max-age=604800, must-revalidate"
+    Header unset ETag
+    FileETag None
+</FilesMatch>

@@ -1,4 +1,7 @@
 @media (max-width: 991px){
+    .promo{
+        background-attachment:scroll;
+    }
     .catalog{
         &__content{
             justify-content: center;
@@ -110,24 +113,32 @@
 
 @media (max-width: 575px){
     .promo{
-        background-position-x: 70%;
         .header{
-            flex-direction: column;
-            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            margin: 0 auto;
+            align-items: flex-start;
             &__logo {
-                margin-bottom: 25px;
+                margin: 10px auto;
+                margin-right: 10px;
+                img{
+                    margin-top: 10px;
+                }
             }
             &__official{
                 display: none;
             }
+            &__contacts{
+                margin: 10px auto;
+            }
             &__phone{
-                font-size: 16px;
+                font-size: 14px;
                 text-align: center;
                 margin: 0 auto;
             }
             .button{
-                width: 160px;
-                height: 35px;
+                width: 130px;
+                height: 40px;
             }
         }        
         &__header {
